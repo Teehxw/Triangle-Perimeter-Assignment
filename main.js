@@ -20,24 +20,20 @@ let lengthxB = +document.getElementById("xB").value;
 let lengthyB = +document.getElementById("yB").value;
 let lengthxC = +document.getElementById("xC").value;
 let lengthyC = +document.getElementById("yC").value;
-    //Process
-// let AB=  lengthxA + lengthyA + lengthxB + lengthyB;
-// ABresultE1.innerHTML = AB ; 
-// let AC=  lengthxA + lengthyA + lengthxC + lengthyC;
-// ACresultE1.innerHTML = AC ;
-// let BC=  lengthxB + lengthyB + lengthxC + lengthyC;
-// BCresultE1.innerHTML = BC ;
-let AB = Math.sqrt((lengthxB-lengthxA)*(lengthxB-lengthxA) + (lengthyB-lengthyA)*(lengthyB-lengthyA));
-let AC =  Math.sqrt((lengthxC-lengthxA)*(lengthxC-lengthxA) + (lengthyC-lengthyA)*(lengthyC-lengthyA));
-let BC =  Math.sqrt((lengthxC-lengthxB)*(lengthxC-lengthxB) + (lengthyC-lengthyB)*(lengthyC-lengthyB));
-let perimeter = AB + AC + BC;
-//Output
-ABresultE1.innerHTML = AB;
-ACresultE1.innerHTML = AC;
-BCresultE1.innerHTML = BC;
+//Process
+let AB = ABresultE1.innerHTML = dist(lengthxA, lengthyA, lengthxB, lengthyB);
+let AC= ACresultE1.innerHTML = dist(lengthxA, lengthyA, lengthxC, lengthyC);
+let BC = BCresultE1.innerHTML = dist(lengthxB, lengthyB, lengthxC, lengthyC);
+
+// Final perimeter
+let perimeter = AC + AB + BC;
 finalP.innerHTML = perimeter;
+
 }
 
-//function dist(x1value, y1value, x2value, y2value){
-//Math.sqrt((x2value-x1value)*(x2value-x1value) + (y2value-y1value)*(y2value-y1value));
-//}
+function dist(x1value, y1value, x2value, y2value){
+    
+   let distance = Math.sqrt((x2value-x1value)*(x2value-x1value) + (y2value-y1value)*(y2value-y1value));
+   return distance
+
+}
