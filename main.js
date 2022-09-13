@@ -32,14 +32,13 @@ ABresultE1.innerHTML = AB;
 ACresultE1.innerHTML = AC;
 BCresultE1.innerHTML = BC;
 // Final perimeter
-let perimeter = AC + AB + BC;
-finalP.innerHTML = perimeter;
+ let perimeter = AC + AB + BC;
+ finalP.innerHTML = perimeter;
 
 }
 
 function dist(x1value, y1value, x2value, y2value){
     
    let distance = Math.sqrt((x2value-x1value)*(x2value-x1value) + (y2value-y1value)*(y2value-y1value));
-   return distance
-
+   return distance;
 }
